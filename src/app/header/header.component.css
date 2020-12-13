@@ -1,0 +1,15 @@
+ul{
+    /* remove default margins and borders from UL */
+    padding: 0px;
+    margin: 0px;
+}
+
+ul a{  
+    /* make the border present but transparent by default */
+    border: solid transparent 3px;
+}
+
+ul a:hover{
+    border-bottom: solid darkblue;
+}
+
