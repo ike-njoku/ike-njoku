@@ -1,0 +1,36 @@
+/* set the view height to 100% */
+.main{
+    height: 100vh;
+}
+
+/* increase the size of the fonts */
+.outPut{
+    font-size: 350%;
+}
+
+.font-larger{
+    font-size: 200%;
+}
+
+.button-container{
+    position: relative;
+}
+
+.button-container button{
+    position: absolute;
+    bottom: 0;
+}
+
+#btn-2{
+    right: 0;
+    margin-right: 51.5%;
+}
+
+
+/* media queries */
+@media (min-width:1250px){
+    button{
+        padding: 1.5%;
+    }
+}
+
