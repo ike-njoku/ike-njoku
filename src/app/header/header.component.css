@@ -1,3 +1,8 @@
+/* all links */
+a{
+    color: white;
+}
+
 ul{
     /* remove default margins and borders from UL */
     padding: 0px;
@@ -10,6 +15,7 @@ ul a{
 }
 
 ul a:hover{
-    border-bottom: solid darkblue;
+    border-bottom: solid orangered;
+    color: orangered;
 }
 

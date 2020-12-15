@@ -775,34 +775,27 @@ input {
 /* primary buttons */
 
 .primary-button {
-    color: white;
-    background-color: #1CC5BE;
-    border: solid 3px #B2F7EF;
-    padding: 1%;
+    color: black;
+    background-color: orangered;
+    padding: 2%;
 }
 
 .primary-button:hover {
     color: black;
-    border: solid 3px #1CC5BE;
-    background-color: #B2F7EF;
-    padding: 1%;
+    padding: 2%;
 }
 
 
 /* secondary buttons */
 
 .secondary-button {
-    color: white;
-    background-color: #B4B4B4;
-    border: solid 3px grey;
-    padding: 1%;
+    color: black;
+    padding: 2%;
 }
 
 .secondary-button:hover {
-    color: white;
-    border: solid 3px #B4B4B4;
-    background-color: grey;
-    padding: 1%;
+    color: black;
+    padding: 2%;
 }
 
 
@@ -816,11 +809,15 @@ input {
 /* --------------------------colors------------------- */
 
 .primary {
-    background-color: #084378;
+    background-color: #001233;
 }
 
 .neutral {
     background-color: white;
+}
+
+.secondary{
+    background-color: #007f5f;
 }
 
 
