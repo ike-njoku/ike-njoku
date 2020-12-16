@@ -1,1 +1,18 @@
-<p>portfolio works!</p>
+<div style="background-color: black;color: white;" class="pad-10 grid full-vh text-center">
+    <!-- clients -->
+    <div *ngFor="let item of itemsToCount" class="col-4 col-sm-full counter mg-t-2">
+        <hr class="hide-small">
+        {{item.runningValue}}
+        <div style="font-size:27px; color:orangered">{{item.name}}</div>
+        <hr>
+    </div>
+
+    <div class="col-12">
+        
+    </div>
+</div>
+
+<!-- showcase -->
+<div class="full-vh neutral">
+    
+</div>

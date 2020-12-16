@@ -711,6 +711,10 @@ body {
     font-size: larger;
 }
 
+/* -----------------hide element on large screen --------------------- */
+.hide-large{
+    display: none;
+}
 
 /* ------------------------------------------font weights------------------------------------------ */
 
@@ -840,6 +844,10 @@ input {
     .col-sm-half {
         grid-column: span 6;
     }
+    /* hide element on small screen */
+    .hide-small{
+        display: none;
+    }
 }
 
 
@@ -848,5 +856,10 @@ input {
 @media (max-width:1250px) and (min-width:600px) {
     .col-sm-half {
         grid-column: span 4;
+    }
+
+    /* hide elements on medium sreens */
+    .hide-medium{
+        display: none;
     }
 }
