@@ -8,6 +8,7 @@ import { LandingComponent } from './landing/landing.component';
 import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { IndexComponent } from './index/index.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { IndexComponent } from './index/index.component';
     LandingComponent,
     AboutComponent,
     PortfolioComponent,
-    IndexComponent
+    IndexComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
