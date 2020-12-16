@@ -682,8 +682,13 @@ body {
 .text-left {
     text-align: left;
 }
-
-
+/* -------------------------view ports and view heights--------------------------------------------------- */
+.full-vh{
+    height: 100vh;
+}
+.full-vw{
+    width: 100vw;
+}
 /* ----------------------------------font sizes---------------------------------- */
 
 .font-xsmall {
@@ -813,7 +818,7 @@ input {
 }
 
 .neutral {
-    background-color: white;
+    background-color: #f5f3f4;
 }
 
 .secondary{

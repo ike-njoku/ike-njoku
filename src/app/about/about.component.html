@@ -1,0 +1,31 @@
+<div class="grid full-vh col-12 neutral pad-5">
+    <div class="col-1 col-sm-full">
+        <!-- title -->
+        <h1>About Me</h1>
+        <div class="line"></div>
+    </div>
+
+    <div class="col-10 col-sm-full pad-5">
+        <!-- content -->
+
+        
+
+        <div class="card shd-1 pad-5 font-larger">
+            <div>
+                <h3>{{currentContent.title}}</h3>
+                <hr>
+            </div>
+          
+            <div class="font-larger">
+                {{currentContent.body}}
+            </div>
+
+            <!-- controls -->
+            <hr>
+            <div class="text-right">
+                <div class="controls" *ngFor="let content of contents" (click)="goToContent(content)" [class.active]="contents[currentContentIndex] === content " ></div>
+            </div>
+        </div>
+
+    </div>
+</div>
