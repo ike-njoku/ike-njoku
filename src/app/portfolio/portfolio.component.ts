@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from '../services/portfolio.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -16,14 +17,7 @@ export class PortfolioComponent implements OnInit {
   ];
 
   // projects
-  projects = [
-    {title:'Project-1', description:'An E-commerce Website ( a two-way multi-client shopping website )', link:'http://link-to-project-1', gitHub:'http://github.com/ike-njoku/project-1' },
-    {title:'Project-2', description:'A Blog that geeds the general public with Accurate information and recent updates', link:'http://link-to-project-2', gitHub:'http://github.com/ike-njoku/project-2' },
-    {title:'Project-3', description:'A student Portal Management system for Christ the Kings College Gwagwalada Abuja', link:'http://link-to-project-3', gitHub:'http://github.com/ike-njoku/project-3' },
-    {title:'Project-4', description:'A grid Based Tetris Game built in Js', link:'http://link-to-project-4', gitHub:'http://github.com/ike-njoku/project-4' },
-    {title:'Project-5', description:'An E-commerce Website ( a two-way multi-client shopping website )', link:'http://link-to-project-5', gitHub:'http://github.com/ike-njoku/project-5' },
-    {title:'Project-6', description:'An E-commerce Website ( a two-way multi-client shopping website )', link:'http://link-to-project-6', gitHub:'http://github.com/ike-njoku/project-6' },
-  ];
+  projects;
 
   // count each item pair
   count(){
@@ -35,9 +29,22 @@ export class PortfolioComponent implements OnInit {
     })
   }
 
-  constructor() { }
+  constructor( private portfolioService : PortfolioService) { }
 
+  private getGitHubRepos(){
+    this.portfolioService.getGithubRepos().subscribe((projects)=>{
+      this.projects = projects.filter((d)=>d.private != true);
+        this.projects.forEach((project)=>{
+          // make the repo accessable by ediing the string returned in the json object
+          project.url = project.url.replace('api.github.com/repos','github.com');
+        })
+      }, (error)=>{
+      window.alert(error)
+    });
+  }
+  
   ngOnInit(): void {
+    this.getGitHubRepos();
     setInterval(()=>this.count(),70);
   }
 
