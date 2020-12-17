@@ -37,16 +37,13 @@
         <a style="color: grey; position: relative;" href="{{project.link}}" *ngFor="let project of projects"  class="card col-4 pad-5 col-md-half shd-1 col-sm-full mg-2">
 
             <div class="pad-5">
-                {{project.name}}
+                {{project.title}}
             </div>
             <hr>
             <div class="pad-5">
                 {{project.description}}
             </div>
-            <div *ngIf="project.contributors" class="text-left">
-               <small>{{project.contributors}}</small> 
-            </div>
-            <a href="{{project.url}}" style="display: absolute; bottom: 0; right: 0;" class="mdi mdi-github-circle float-right"></a>
+            <i style="display: absolute; bottom: 0; right: 0;" class="mdi mdi-github-circle float-right"></i>
         </a>
     
     </div>
