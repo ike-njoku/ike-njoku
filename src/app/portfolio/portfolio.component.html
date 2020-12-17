@@ -1,20 +1,51 @@
-<div style="background-color: black;color: white;" class="pad-10 grid full-vh text-center">
+<div style="background-color: black;color: white;" class="pad-10 grid full-vh">
     <!-- clients -->
-    <div *ngFor="let item of itemsToCount" class="col-4 col-sm-full counter mg-t-2">
+    <div *ngFor="let item of itemsToCount" class="col-4 col-sm-full counter mg-t-2 text-center">
         <hr class="hide-small">
         {{item.runningValue}}
         <div style="font-size:27px; color:orangered">{{item.name}}</div>
         <hr>
     </div>
 
-    <div class="col-12" style="color:white">
-       <i class="fa fa-html5"></i>
-       <i class="fa fa-git"></i>
-       <i class="fa fa-css3"></i>
+    <!-- coding technologies -->
+    <div class="col-12 text-center" style="color:grey;background-color: black;">
+        <!-- mdi fonts hosted locally -->
+        <i class="mdi mdi-language-html5"></i>
+        <i class="mdi mdi-database"></i>
+        <i class="mdi mdi-language-css3"></i>
+        <i class="mdi mdi-git"></i>
+        <i class="mdi mdi-language-python"></i>
+        <i class="mdi mdi-language-javascript"></i>
+        <i class="mdi mdi-language-php"></i>
+        <i class="mdi mdi-language-typescript"></i>
+        <i class="mdi mdi-angular"></i>
     </div>
+
 </div>
 
 <!-- showcase -->
-<div class="full-vh neutral">
+<div class="full-vh neutral grid pad-4">
+    <!-- title -->
+    <div class="col-1 col-sm-full">
+        <h1>Projects</h1>
+        <div class="line"></div>
+    </div>
+
+    <!-- content -->
+    <div  class="col-10 col-sm-full pad-5 grid font-larger">
+        
+        <a style="color: grey; position: relative;" href="{{project.link}}" *ngFor="let project of projects"  class="card col-4 pad-5 col-md-half shd-1 col-sm-full mg-2">
+
+            <div class="pad-5">
+                {{project.title}}
+            </div>
+            <hr>
+            <div class="pad-5">
+                {{project.description}}
+            </div>
+            <i style="display: absolute; bottom: 0; right: 0;" class="mdi mdi-github-circle float-right"></i>
+        </a>
     
+    </div>
+
 </div>

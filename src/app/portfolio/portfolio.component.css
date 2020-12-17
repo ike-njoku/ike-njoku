@@ -1,4 +1,20 @@
 /* counter */
 .counter{
-    font-size: 600%;
+    font-size: 650%;
+}
+/* the divider (underline) (under titles) */
+.line{
+    padding: 5px;
+    background-color: orangered;
+}
+
+/* material icons */
+.mdi{
+    font-size: 120%;
+    margin-left: 0.5%;
+}
+
+.mdi:hover{
+    font-size: 150%;
+    color: white;
 }

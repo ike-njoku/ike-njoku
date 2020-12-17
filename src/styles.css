@@ -684,7 +684,8 @@ body {
 }
 /* -------------------------view ports and view heights--------------------------------------------------- */
 .full-vh{
-    height: 100vh;
+    min-height: 100vh;
+
 }
 .full-vw{
     width: 100vw;
@@ -840,6 +841,7 @@ input {
     .col-sm-full {
         grid-column: span 12;
     }
+
     /* half column on small screen */
     .col-sm-half {
         grid-column: span 6;
@@ -856,6 +858,10 @@ input {
 @media (max-width:1250px) and (min-width:600px) {
     .col-sm-half {
         grid-column: span 4;
+    }
+
+    .col-md-half{
+        grid-column: span 6;
     }
 
     /* hide elements on medium sreens */

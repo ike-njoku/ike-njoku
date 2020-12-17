@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/fonts/material-design-iconic-font/css/materialdesignicons.min.css",
               "node_modules/font-awesome/css/font-awesome.css",
               "src/styles.css"
             ],
