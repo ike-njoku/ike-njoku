@@ -27,7 +27,7 @@ export class PortfolioComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    setInterval(()=>this.count(),100);
+    setInterval(()=>this.count(),70);
   }
 
 }
