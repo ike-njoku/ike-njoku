@@ -37,13 +37,21 @@
         <a style="color: grey; position: relative;" href="{{project.link}}" *ngFor="let project of projects"  class="card col-4 pad-5 col-md-half shd-1 col-sm-full mg-2">
 
             <div class="pad-5">
-                {{project.title}}
+                {{project.name}}
             </div>
             <hr>
             <div class="pad-5">
                 {{project.description}}
             </div>
-            <i style="display: absolute; bottom: 0; right: 0;" class="mdi mdi-github-circle float-right"></i>
+
+           
+            <div style="font-size: smaller;" class="grid mg-t-10">
+                <div class="col-8 font-small font-bold">{{project.language}}</div>
+                <div class="col-4">
+                    <a href="{{project.url}}" style="display: absolute; bottom: 0; right: 0;" class="mdi mdi-github-circle float-right"></a>
+                </div>
+            </div>
+
         </a>
     
     </div>
