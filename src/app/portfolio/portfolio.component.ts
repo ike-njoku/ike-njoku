@@ -11,9 +11,9 @@ export class PortfolioComponent implements OnInit {
   // items to count
   itemsToCount = [
     // projects is fetched from github
-    {name:'Clients', runningValue:0 ,stopValue:42 },
-    {name:'Projects', runningValue:0 ,stopValue:52 },
-    {name:'Articles', runningValue:0 ,stopValue:174 },
+    {name:'Clients', runningValue:0 ,stopValue:7 },
+    {name:'Projects', runningValue:0 ,stopValue:16 },
+    {name:'Articles', runningValue:0 ,stopValue:23 },
   ];
 
   // projects
