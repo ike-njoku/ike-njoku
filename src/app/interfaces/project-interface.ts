@@ -6,4 +6,5 @@ export interface Project{
     avatarUrl?: string;
     languages?: string[];
     contributors?: string[];
+    homepage?: string
 }
