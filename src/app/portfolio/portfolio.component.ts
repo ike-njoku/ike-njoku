@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { PortfolioService } from '../services/portfolio.service';
+
 
 @Component({
   selector: 'app-portfolio',
@@ -19,6 +20,8 @@ export class PortfolioComponent implements OnInit {
   // projects
   projects;
 
+  
+
   // count each item pair
   count(){
     this.itemsToCount.forEach((item)=>{
@@ -28,6 +31,9 @@ export class PortfolioComponent implements OnInit {
       item.runningValue++;
     })
   }
+
+
+  
 
   getGitHubRepos(){
     this.portFolioService.getGitHubRepos().subscribe((projects)=>{
@@ -45,5 +51,7 @@ export class PortfolioComponent implements OnInit {
     setInterval(()=>this.count(),70);
     this.getGitHubRepos();
   }
+
+ 
 
 }
