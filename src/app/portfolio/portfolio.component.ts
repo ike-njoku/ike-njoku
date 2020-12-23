@@ -20,7 +20,6 @@ export class PortfolioComponent implements OnInit {
   // projects
   projects;
 
-  
 
   // count each item pair
   count(){
@@ -31,9 +30,6 @@ export class PortfolioComponent implements OnInit {
       item.runningValue++;
     })
   }
-
-
-  
 
   getGitHubRepos(){
     this.portFolioService.getGitHubRepos().subscribe((projects)=>{
@@ -51,7 +47,5 @@ export class PortfolioComponent implements OnInit {
     setInterval(()=>this.count(),70);
     this.getGitHubRepos();
   }
-
- 
 
 }

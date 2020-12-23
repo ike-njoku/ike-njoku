@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 
-
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -32,11 +31,18 @@ export class AboutComponent implements OnInit {
     }
   }
 
-
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit(): void {
     this.currentContent = this.contents[this.currentContentIndex];
+  }
+
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+
+
   }
 
 }
