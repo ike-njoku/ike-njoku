@@ -10,6 +10,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { IndexComponent } from './index/index.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewCvComponent } from './view-cv/view-cv.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     PortfolioComponent,
     IndexComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ViewCvComponent
   ],
   imports: [
     BrowserModule,
