@@ -8,11 +8,26 @@ import { catchError} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class PortfolioService {
+
+  // CV apiUrl (parameter in the google Docs api)
+  DocumentId = '1fVbtbaNQyqrf5mGzy7CiXMMu2Tf-mBAa01gYhwAEg3Q';
+  
+  // api search (url excluding the parameter )
+  googleDocsApi = 'https://docs.googleapis.com/v1/documents/';
+  
   
   // gitHubReposApi URl
   private readonly gitHubReposApiUrl = 'https://api.github.com/users/ike-njoku/repos'
 
   constructor(private http: HttpClient) { }
+
+  // get CV from google docs so that it can be displayed
+  getCurriculumVitae(): Observable<[]>{
+    return this.http.get<[]>(`${this.googleDocsApi}+${this.DocumentId}`).pipe(
+      // handle errors 
+      catchError(this.handleHttpErrors)
+    );
+  }
 
   getGitHubRepos(): Observable<Project[]>{
     return this.http.get<Project[]>(this.gitHubReposApiUrl).pipe(
