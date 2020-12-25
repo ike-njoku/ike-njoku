@@ -22,3 +22,24 @@
 .slide-up{
     color:red
 }
+
+.card{
+    font-size: large;
+    color: grey;
+    box-shadow: 2px 2px 2px grey;
+    transition: box-shadow 0.5s linear, color 1s ease-in, transform 0.7s ease-out;
+}
+
+.card-header{
+    font-weight: bold;
+}
+
+.card-body{
+    font-size: medium;
+}
+
+.card:hover{
+    box-shadow: 4px 4px 4px grey;
+    color:#7A899C;
+    transform: scale(1.03);
+}
