@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+   // url to fetch github repos
+   gitHubApiUrl: '',
+   // the mode i'm fiddling with
+   mode:'dev'
 };
 
 /*
