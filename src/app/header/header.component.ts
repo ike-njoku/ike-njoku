@@ -13,8 +13,5 @@ export class HeaderComponent implements OnInit {
   environ = environment;
   
   ngOnInit(): void {
-    console.log(this.environ)
-    
   }
-
 }

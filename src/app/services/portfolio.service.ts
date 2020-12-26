@@ -31,7 +31,6 @@ export class PortfolioService {
   }
 
   getGitHubRepos(): Observable<Project[]>{
-    console.log(environment)
     return this.http.get<Project[]>(this.gitHubReposApiUrl).pipe(
       // handle errors
       catchError(this.handleHttpErrors)

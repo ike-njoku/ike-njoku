@@ -1,9 +1,9 @@
 <nav style="background-color: black;" class="pad-2 grid primary font-larger">
     <!-- index link  -->
-    <div class="col-8 ">
+    <div class="col-4 ">
         <div class="font-bold">
             <a href="">IkenjokuDc
-                <span style="color: green;">
+                <span class="font-small" style="color: green; font-size: smaller;">
                     {{environ.mode}}
                 </span>
             </a>
@@ -11,13 +11,13 @@
     </div>
 
     <!-- navigation -->
-    <div class="col-4">
+    <div class="col-8">
         <ul class="mg-r-1">
             <li class="display-inline mg-l-5 float-right">
                 <a class="pad-10" href="">Blog</a>
             </li>
 
-            <li class="display-inline  float-right">
+            <li class="display-inline mg-l-5  float-right">
                 <a class="pad-10" href="">Contact</a>
             </li>                                
 
@@ -25,7 +25,7 @@
                 <a [routerLink]="['/portfolio']" routerLinkActive="router-link-active"  class="pad-10" href="">Portfolio</a>
             </li>
 
-            <li>
+            <li class="mg-l-5 float-right">
                 <a [routerLink]="['/curriculum-vitae']" >View C.V</a>
             </li>
        </ul>
