@@ -10,10 +10,10 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  // 
+  environ = environment;
   
   ngOnInit(): void {
-    console.log(environment.mode);
+    console.log(this.environ)
     
   }
 

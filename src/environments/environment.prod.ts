@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  gitHubApiUrl: '',
-  mode:'production Mode'
+  gitHubApiUrl: 'https://api.github.com/users/ike-njoku/repos',
+  mode:''
 };

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { Project } from '../interfaces/project-interface';
 import { catchError} from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class PortfolioService {
   
   
   // gitHubReposApi URl
-  private readonly gitHubReposApiUrl = 'https://api.github.com/users/ike-njoku/repos'
+  private readonly gitHubReposApiUrl = environment.gitHubApiUrl;
 
   constructor(private http: HttpClient) { }
 
@@ -30,6 +31,7 @@ export class PortfolioService {
   }
 
   getGitHubRepos(): Observable<Project[]>{
+    console.log(environment)
     return this.http.get<Project[]>(this.gitHubReposApiUrl).pipe(
       // handle errors
       catchError(this.handleHttpErrors)
