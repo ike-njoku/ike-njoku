@@ -47,5 +47,4 @@ export class PortfolioComponent implements OnInit {
     setInterval(()=>this.count(),70);
     this.getGitHubRepos();
   }
-
 }

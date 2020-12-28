@@ -1,0 +1,10 @@
+.line{
+    padding: 5px;
+    background-color: orangered;
+}
+
+.full-vh{
+    background-color: black;
+    color: white; 
+    font-size: 300%;
+}
