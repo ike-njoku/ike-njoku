@@ -34,6 +34,10 @@ button:hover{
     background-color: orange;
 }
 
+.card{
+    overflow: hidden;
+}
+
 @media(min-width:1250px){
     button{
         padding: 1.5%;

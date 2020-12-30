@@ -10,20 +10,22 @@
 
         
 
-        <div class="card shd-1 pad-5 font-larger">
+        <div class="card shd-1 pad-5 font-larger fade-in">
             <div>
-                <h3>{{currentContent.title}}</h3>
+                <h3 class="" #heading >{{currentContent.title}}</h3>
                 <hr>
             </div>
           
             <div class="font-larger">
+              <span class="" #body>
                 {{currentContent.body}}
+              </span>  
             </div>
 
             <!-- controls -->
             <hr>
             <div class="text-right">
-                <div class="controls" *ngFor="let content of contents" (click)="goToContent(content)" [class.active]="contents[currentContentIndex] === content" ></div>
+                <div class="controls" *ngFor="let content of contents" (click)="goToContent(content); addAnimation(); " [class.active]="contents[currentContentIndex] === content" ></div>
             </div>
         </div>
 

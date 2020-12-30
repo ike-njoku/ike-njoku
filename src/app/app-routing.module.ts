@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AboutComponent } from './about/about.component';
+import { HeaderComponent } from './header/header.component';
 import { IndexComponent } from './index/index.component';
+import { LandingComponent } from './landing/landing.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ViewCvComponent } from './view-cv/view-cv.component';
@@ -23,3 +26,13 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents = [
+  HeaderComponent,
+  AboutComponent,
+  IndexComponent,
+  LandingComponent,
+  IndexComponent,
+  PortfolioComponent,
+  ViewCvComponent,
+  PageNotFoundComponent
+]
