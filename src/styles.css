@@ -4,26 +4,11 @@
 /* stylesheet by ike-njoku David chikwunweike (ikenjokudc@gmail.com november 2020) */
 
 
-/* ------------------------------------variables---------------------------------------------- */
-:root{
-    /* ---------colors --------- */
-    /* body color */
-    --body-color:#F6F7F9;
-    --primary-color:#001233;
-    --secondary-color:#007f5f;
-    --neutral-color:#f5f3f4;
-    /*  */
-    --primary-button-color:orangered;
-    /* animation duration */
-    --animation-duration:0.7s;
-    --fade-in-animation-duration:1.5s;
-}
-
 /* body */
 
 body {
     /* Remove margin and paddings */
-    background-color: var(--body-color) ;
+    background-color: #F6F7F9;
     margin: 0px;
     padding: 0px;
 }
@@ -758,19 +743,6 @@ body {
 }
 
 
-/* -----------------------------------------positions----------------------------- */
-.relative{
-    position: relative;
-}
-.fixed{
-    position: fixed;
-}
-.absolute{
-    position: absolute;
-}
-.sticky{
-    position: sticky;
-}
 /* -------------------------  display ( block) ---------------------------------- */
 
 .display-block {
@@ -818,7 +790,7 @@ input {
 
 .primary-button {
     color: black;
-    background-color:var(--primary-button-color);
+    background-color: orangered;
     padding: 2%;
 }
 
@@ -851,92 +823,21 @@ input {
 /* --------------------------colors------------------- */
 
 .primary {
-    background-color:var(--primary-color) ;
+    background-color: #001233;
 }
 
 .neutral {
-    background-color: var(--neutral-color);
+    background-color: #f5f3f4;
 }
 
 .secondary{
-    background-color: var(--secondary-color);
+    background-color: #007f5f;
 }
 
 
 
-/* ------------------------------------------ Simple ----animations--------------------------------------------------------------- */
-.slide-up{
-    animation-name: slide-up;
-    animation-duration: var(--animation-duration) ;
-    position: relative;
-}
 
-.slide-down{
-    animation-name: slide-down;
-    animation-duration: var(--animation-duration) ;
-    position: relative;
-}
-
-.slide-in-left{
-    animation-name: slide-in-left;
-    animation-duration: var(--animation-duration) ;
-    position: relative;
-}
-
-.slide-in-right{
-    animation-name:slide-in-right;
-    animation-duration: var(--animation-duration) ;
-    position: relative;
-}
-
-.fade-in, 
-.fade-out{
-    animation-name: fade-in;
-    animation-duration: var(--fade-in-animation-duration) ;
-    position: relative;
-    animation-timing-function: ease-in;
-}
-
-
-/* ---keyframes--- and webkits */
-/* slide down */
-@keyframes slide-down{
-    0% {top: -25%;}
-    100%{top: 0%;}
-}
-
-
-/* slide up */
-@keyframes slide-up{
-    0% {top: 25%;}
-    100%{top: 0%;}
-}
-
-/* slide in left */
-@keyframes slide-in-left{
-    0%{left: 25%;}
-    100%{left:0%;}
-}
-
-/* slide in right */
-@keyframes slide-in-right{
-   0%{right: 25%}
-   100%{right: 0%}
-}
-
-/* --fade in-- */
-@keyframes fade-in{
-    0%{opacity: 0;}
-    100%{opacity:1;}
-}
-
-/* fadde out */
-@keyframes fade-out{
-    0%{opacity: 1;}
-    100%{opacity: 0}
-}
-/* ------web kit----- */
-/* ------------------------------- media queries----------------------------------- */
+/* ---------------------------------------------- media queries---------------------------------------------- */
 
 
 /* mobile phones (small screen) */
