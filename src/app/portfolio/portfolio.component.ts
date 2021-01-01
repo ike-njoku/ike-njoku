@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { PortfolioService } from '../services/portfolio.service';
 
 
@@ -8,8 +8,6 @@ import { PortfolioService } from '../services/portfolio.service';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
-
-  @ViewChild('projectsGrid')projectsGrid:ElementRef;
 
   // items to count
   itemsToCount = [
@@ -43,21 +41,10 @@ export class PortfolioComponent implements OnInit {
     },(error)=>window.alert(error))
   }
 
-  constructor(
-    private portFolioService : PortfolioService,
-    private renderer : Renderer2
-  ) { }
+  constructor(private portFolioService : PortfolioService) { }
 
   ngOnInit(): void {
     setInterval(()=>this.count(),70);
     this.getGitHubRepos();
-  }
-
-  // ngAfterViewInit
-  ngAfterViewInit(): void {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
-    console.log(this.projectsGrid.nativeElement.children);
-    
   }
 }
