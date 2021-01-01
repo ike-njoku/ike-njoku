@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -13,10 +13,6 @@ export class AboutComponent implements OnInit {
     {title:" How it Started ", body:" I started Coding back in 2017, after i felt a developer had over charged me to create a blog. I decided to build the blog myself. Along the line, I fell in love with Coding. I never finished the blog because I found there was so much more that I could build "},
     {title:" How It's Going ", body:" I started Coding back in 2017, after i felt a developer had over charged me to create a blog. I decided to build the blog myself. Along the line, I fell in love with Coding. I never finished the blog because I found there was so much more that I could build "},
   ];
-
-  // element ref for animataion purposes
-  @ViewChild('heading') heading:ElementRef
-  @ViewChild('body') body:ElementRef
 
   // current  content Index
   currentContentIndex = 0;
@@ -35,24 +31,16 @@ export class AboutComponent implements OnInit {
     }
   }
 
-  addAnimation(){
-
-    this.renderer.removeClass(this.heading.nativeElement,'slide-in-left');
-    this.renderer.removeClass(this.body.nativeElement,'slide-in-left');
-    
-    setTimeout(()=>{
-      this.renderer.addClass(this.heading.nativeElement, 'slide-in-left');
-      this.renderer.addClass(this.body.nativeElement,'slide-in-left');
-    },10)
-  }
-
   constructor(
-    private renderer : Renderer2
   ) { }
 
   ngOnInit(): void {
     this.currentContent = this.contents[this.currentContentIndex];
   }
 
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+  }
 
 }
