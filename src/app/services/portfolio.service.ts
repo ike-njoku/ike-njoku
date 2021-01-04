@@ -18,7 +18,7 @@ export class PortfolioService {
   
   
   // gitHubReposApi URl
-  private readonly gitHubReposApiUrl = environment.gitHubApiUrl;
+  private readonly gitHubReposApiUrl = environment.gitHubApiBase;
 
   constructor(private http: HttpClient) { }
 

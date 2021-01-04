@@ -11,10 +11,6 @@ import { IndexComponent } from './index/index.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewCvComponent } from './view-cv/view-cv.component';
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of de7b334... added slide effects to about component
 
 @NgModule({
   declarations: [
