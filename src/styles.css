@@ -753,7 +753,19 @@ body {
     display: inline-block;
 }
 
-
+/* ......................................................positions------------------------------------------- */
+.relative{
+    position: relative;
+}
+.static{
+    position: static;
+}
+.fixed{
+    position: fixed;
+}
+.absolute{
+    position: absolute;
+}
 /* --------------------------------------------- buttons, links, inputs, default  --------------------------------  */
 
 
@@ -781,6 +793,7 @@ input {
 /* ----------------------------COMPONENTS---------------------------------------- */
 .card{
     background-color: white;
+    overflow: hidden;
 }
 
 /* ------customized buttons------ */
@@ -856,6 +869,70 @@ input {
     .hide-small{
         display: none;
     }
+}
+
+/* -------------------------------------animations------------------------------------------------------ */
+.fade-in{
+    position:relative;
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+.fade-out{
+    position:relative;
+    animation-name: fade-out;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+}
+.slide-up{
+    position:relative;
+    animation-name: slide-up;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in;
+}
+.slide-down{
+    position:relative;
+    animation-name: slide-down;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in;
+}
+.slide-in-right{
+    position:relative;
+    animation-name: slide-in-left;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in;
+}
+.slide-in-left{
+    position:relative;
+    animation-name: slide-in-right;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in;
+}
+
+/* keyframes */
+@keyframes slide-up{
+    0%{top: 25%;}
+    100%{top: 0%;}
+}
+@keyframes slide-down{
+    0%{top: 0%;}
+    100%{top: 25%;}
+}
+@keyframes slide-in-left{
+    0%{left:-25%}
+    100%{left:0%}
+}
+@keyframes slide-in-right{
+    0%{right:-25%}
+    100%{right:0%}
+}
+@keyframes fade-in{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+@keyframes fade-out{
+    0%{opacity:1}
+    100%{opacity:0}
 }
 
 
