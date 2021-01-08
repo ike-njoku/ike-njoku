@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 import { PortfolioService } from '../services/portfolio.service';
 
 
@@ -9,16 +9,24 @@ import { PortfolioService } from '../services/portfolio.service';
 })
 export class PortfolioComponent implements OnInit {
 
-  // items to count
-  itemsToCount = [
-    // projects is fetched from github
-    {name:'Clients', runningValue:0 ,stopValue:7 },
-    {name:'Projects', runningValue:0 ,stopValue:16 },
-    {name:'Articles', runningValue:0 ,stopValue:23 },
-  ];
+  //  element(s) to animate 
+  @ViewChild('animatable')animatable: ElementRef;
 
   // projects
   projects;
+
+   // items to count
+   itemsToCount = [
+    // projects is fetched from github
+    {name:'Clients', runningValue:0 ,stopValue:7 },
+    {name:'Projects', runningValue:0 ,stopValue:10},
+    {name:'Articles', runningValue:0 ,stopValue:23 },
+  ];
+
+  constructor(
+    private portFolioService : PortfolioService,
+    private renderer : Renderer2
+    ) { }
 
 
   // count each item pair
@@ -29,6 +37,7 @@ export class PortfolioComponent implements OnInit {
       // increment the running value
       item.runningValue++;
     })
+        
   }
 
   getGitHubRepos(){
@@ -41,10 +50,18 @@ export class PortfolioComponent implements OnInit {
     },(error)=>window.alert(error))
   }
 
-  constructor(private portFolioService : PortfolioService) { }
+  // add slide up effect to elements on scroll
+  addAnimation(){
+    let animatableElement = this.animatable.nativeElement;
+    window.alert(animatableElement)
+  }
+
 
   ngOnInit(): void {
     setInterval(()=>this.count(),70);
     this.getGitHubRepos();
   }
+
+  
 }
+
