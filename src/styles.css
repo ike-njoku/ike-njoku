@@ -766,6 +766,12 @@ body {
 .absolute{
     position: absolute;
 }
+/* sticky */
+.sticky-top{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
 /* --------------------------------------------- buttons, links, inputs, default  --------------------------------  */
 
 

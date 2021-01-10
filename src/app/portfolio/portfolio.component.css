@@ -38,6 +38,13 @@
     font-size: medium;
 }
 
+.card-footer{
+    background-color: #333;
+    color: white;
+    height: 1rem;
+    text-overflow: ellipsis;
+}
+
 .card:hover{
     box-shadow: 4px 4px 4px grey;
     color:#7A899C;
