@@ -10,7 +10,7 @@ import { PortfolioService } from '../services/portfolio.service';
 export class PortfolioComponent implements OnInit {
 
   //  element(s) to animate 
-  @ViewChild('animatable')animatable: ElementRef;
+  @ViewChild('animatable')animatable;
 
   // projects
   projects;
@@ -52,14 +52,23 @@ export class PortfolioComponent implements OnInit {
 
   // add slide up effect to elements on scroll
   addAnimation(){
-    let animatableElement = this.animatable.nativeElement;
-    window.alert(animatableElement)
+    const clientHeight = window.innerHeight;
+    const ChildElements =[ ...this.animatable.nativeElement.children]
+    ChildElements.forEach((childElement)=>{
+     if(childElement.getBoundingClientRect().top < clientHeight){
+       childElement.classList.add('slide-up')
+      };
+    })
   }
 
 
   ngOnInit(): void {
     setInterval(()=>this.count(),70);
     this.getGitHubRepos();
+
+    window.addEventListener('scroll',()=>{
+      this.addAnimation();
+    })
   }
 
   

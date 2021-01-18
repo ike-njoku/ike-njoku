@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 // array of job Despciptions
 const JOBDESCRIPTIONS =[
   "a Software Engineer...",
@@ -16,6 +15,17 @@ const JOBDESCRIPTIONS =[
 })
 
 export class LandingComponent implements OnInit {
+  // play audio while typing
+  playSound(): void{
+    let keyPadSound = new Audio();
+    keyPadSound.src = '../assets/audio/typewriter-key-1.wav';
+    keyPadSound.load();
+    keyPadSound.play();
+  }
+
+  // (property controls adding characters to be displayed
+  //  destroyed (ngOnDistroy))
+  appendCharacters;
 
   // the current job description index (iteration value)
   jobDescriptionIndex = 0;
@@ -45,17 +55,21 @@ export class LandingComponent implements OnInit {
     let currentCharacterIndex = 0;
 
     // create a timer function (set interval method) to update the charactersToDisplay (this.charactersToDisplay) at a given interval
-    let appendCharacters = setInterval(()=>{
+    this.appendCharacters = setInterval(()=>{
      
-      this.charactersToDisplay += this.currentJobDescription[currentCharacterIndex]
+      this.charactersToDisplay += this.currentJobDescription[currentCharacterIndex];
+      this.playSound();
+
       // increment the current characterIndex
       currentCharacterIndex++;
       // range checks
       if(currentCharacterIndex > this.currentJobDescription.length -1){ 
-        clearInterval(appendCharacters);
+        clearInterval(this.appendCharacters);
         // clear the characters that have been displayed in preparation for selecting the next job description
         // call the deleteCharacters method after time x
-        setTimeout(() =>this.deleteCharactersFromDisplay(),1000)
+        setTimeout(() =>{
+          this.deleteCharactersFromDisplay();
+        },1000)
       } 
     },150)
 
@@ -64,8 +78,8 @@ export class LandingComponent implements OnInit {
   // method to clear the displayed characters ( meant to be inside the update display method, but CLEANER CODE... fuck Yeah!!! )
   deleteCharactersFromDisplay(){
     let clearCharacters  = setInterval(()=>{
-      this.charactersToDisplay = this.charactersToDisplay.slice(0,-1)
-
+      this.charactersToDisplay = this.charactersToDisplay.slice(0,-1);
+      this.playSound();
       // range checks
       if(this.charactersToDisplay.length == 0){ 
         // stop the interval function
@@ -82,6 +96,13 @@ export class LandingComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectJobDescription();
+  }
+
+  // on destroy
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    clearInterval(this.appendCharacters);
   }
 
 }
