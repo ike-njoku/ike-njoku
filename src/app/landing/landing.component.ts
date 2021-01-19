@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // array of job Despciptions
 const JOBDESCRIPTIONS =[
   "a Software Engineer...",
-  "a UI/UX designer..",
+  "a UI/UX designer...",
   "a Coding Instructor...",
   "a Writer..."
 ];

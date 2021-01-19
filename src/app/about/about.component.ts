@@ -10,7 +10,9 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
 
 
 export class AboutComponent implements OnInit {
-
+  // scroll animation
+  @ViewChild('aboutContainer',{static: true})aboutContainer;
+  // 
   @ViewChild('heading')contentHeading: ElementRef;
   @ViewChild('body')contentBody: ElementRef;
 
@@ -55,11 +57,27 @@ export class AboutComponent implements OnInit {
 
   }
 
+  // add animation on scroll
+  addScrollAnimation(){
+    const windowHeight = window.innerHeight;
+    const elementTop = this.aboutContainer.nativeElement.getBoundingClientRect().top;
+    if(elementTop< windowHeight) this.aboutContainer.nativeElement.classList.add('slide-up');
+    else this.aboutContainer.nativeElement.classList.remove('slide-up')
+  }
+
 
   ngOnInit(): void {
     this.currentContent = this.contents[this.currentContentIndex];
+
+    window.addEventListener('scroll',()=>{
+      this.addScrollAnimation();
+    })
   }
 
- 
+ ngOnDestroy(): void {
+   //Called once, before the instance is destroyed.
+   //Add 'implements OnDestroy' to the class.
+   this.addScrollAnimation();
+ }
 
 }
