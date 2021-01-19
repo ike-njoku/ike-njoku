@@ -11,6 +11,7 @@ import { IndexComponent } from './index/index.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewCvComponent } from './view-cv/view-cv.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ViewCvComponent } from './view-cv/view-cv.component';
     PortfolioComponent,
     IndexComponent,
     PageNotFoundComponent,
-    ViewCvComponent
+    ViewCvComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
