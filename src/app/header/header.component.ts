@@ -20,7 +20,6 @@ export class HeaderComponent implements OnInit {
     {toolTip:'Blog', href: '/'},
     {toolTip:'contact', href:'/'},
     {toolTip:'portfolio', href:'/portfolio'},
-
   ]
 
  showToolTip(link){
