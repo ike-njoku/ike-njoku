@@ -9,8 +9,29 @@ import { environment } from '../../environments/environment'
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-
+  // whether or not to show menu
+  showMenu: boolean = false;
+  // environment variables
   environ = environment;
+
+  link;
+
+  links =[
+    {toolTip:'Blog', href: '/'},
+    {toolTip:'contact', href:'/'},
+    {toolTip:'portfolio', href:'/portfolio'},
+
+  ]
+
+ showToolTip(link){
+  this.link = link;
+  console.log(link.toolTip)
+}
+
+hideToolTip(){
+  this.link = '';
+}
+  
   
   ngOnInit(): void {
   }

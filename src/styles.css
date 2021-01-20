@@ -872,28 +872,6 @@ input {
 
 
 
-
-/* ---------------------------------------------- media queries---------------------------------------------- */
-
-
-/* mobile phones (small screen) */
-
-@media (max-width: 600px) {
-    /* full column on small screen */
-    .col-sm-full {
-        grid-column: span 12;
-    }
-
-    /* half column on small screen */
-    .col-sm-half {
-        grid-column: span 6;
-    }
-    /* hide element on small screen */
-    .hide-small{
-        display: none;
-    }
-}
-
 /* -------------------------------------animations------------------------------------------------------ */
 .fade-in{
     position:relative;
@@ -958,6 +936,28 @@ input {
     100%{opacity:0}
 }
 
+
+
+/* ---------------------------------------------- media queries---------------------------------------------- */
+
+
+/* mobile phones (small screen) */
+
+@media (max-width: 600px) {
+    /* full column on small screen */
+    .col-sm-full {
+        grid-column: span 12;
+    }
+
+    /* half column on small screen */
+    .col-sm-half {
+        grid-column: span 6;
+    }
+    /* hide element on small screen */
+    .hide-small{
+        display: none;
+    }
+}
 
 /* tablets (medium screen) */
 
