@@ -58,7 +58,7 @@ export class LandingComponent implements OnInit {
     this.appendCharacters = setInterval(()=>{
      
       this.charactersToDisplay += this.currentJobDescription[currentCharacterIndex];
-      this.playSound();
+      // this.playSound();
 
       // increment the current characterIndex
       currentCharacterIndex++;
@@ -79,7 +79,7 @@ export class LandingComponent implements OnInit {
   deleteCharactersFromDisplay(){
     let clearCharacters  = setInterval(()=>{
       this.charactersToDisplay = this.charactersToDisplay.slice(0,-1);
-      this.playSound();
+      // this.playSound();
       // range checks
       if(this.charactersToDisplay.length == 0){ 
         // stop the interval function

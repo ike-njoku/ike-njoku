@@ -57,7 +57,9 @@ export class PortfolioComponent implements OnInit {
     ChildElements.forEach((childElement)=>{
      if(childElement.getBoundingClientRect().top < clientHeight){
        childElement.classList.add('slide-up')
-      };
+      }else{
+        childElement.classList.remove('slide-up')
+      }
     })
   }
 
