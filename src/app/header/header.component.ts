@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
 
   links =[
     {toolTip:'Blog', href: '/'},
-    {toolTip:'contact', href:'/'},
+    {toolTip:'contact', href:'/contact'},
     {toolTip:'portfolio', href:'/portfolio'},
   ]
 

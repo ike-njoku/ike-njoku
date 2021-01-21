@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ContactComponent } from './contact/contact.component';
 import { IndexComponent } from './index/index.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -14,6 +15,8 @@ const routes: Routes = [
   {path:'portfolio',component:PortfolioComponent},
   // CV
   {path:'curriculum-vitae', component:ViewCvComponent},
+  // contact 
+  {path:'contact', component:ContactComponent},
   // page not found (404)
   {path:'**', component:PageNotFoundComponent}
 ];

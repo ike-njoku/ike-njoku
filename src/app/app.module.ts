@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HttpClientModule } from '@angular/common/http';
 import { ViewCvComponent } from './view-cv/view-cv.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     IndexComponent,
     PageNotFoundComponent,
     ViewCvComponent,
-    FooterComponent
+    FooterComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
