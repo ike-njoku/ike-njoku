@@ -976,7 +976,10 @@ input {
     .col-md-half{
         grid-column: span 6;
     }
-
+    
+    .col-md-full{
+        grid-column: span 12;
+    }
     /* hide elements on medium sreens */
     .hide-medium{
         display: none;

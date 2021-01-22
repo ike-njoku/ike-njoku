@@ -1,0 +1,14 @@
+.line{
+    padding: 5px;
+    background-color: orangered;
+}
+
+textarea{
+    resize: vertical;
+}
+
+input, textarea{
+    background-color: black;
+    border:none;
+    border-bottom: solid 2px white ;
+}
