@@ -1,8 +1,7 @@
 <div style="background-color: black;color: white;font-family: monospace;" class="pad-10 grid full-vh">
     <!-- clients -->
     <div *ngFor="let item of itemsToCount" class="col-4 col-sm-full counter mg-t-2 text-center">
-        <hr class="hide-small">
-        {{item.runningValue}}
+        <hr class="hide-small"> {{item.runningValue}}
         <div style="font-size:27px; color:orangered">{{item.name}}</div>
         <hr>
     </div>
@@ -32,13 +31,13 @@
     </div>
 
     <!-- content -->
-    <div  #animatable class="col-10 col-sm-full pad-5 grid font-larger">
-        
-        <a  href="{{project.homepage}}" *ngFor="let project of projects"  class=" card col-4 pad-5 col-md-half col-sm-full mg-2">
+    <div #animatable class="col-10 col-sm-full pad-5 grid font-larger">
+
+        <a href="{{project.homepage}}" *ngFor="let project of projects" class=" card col-4 pad-5 col-md-half col-sm-full mg-2">
 
             <div class="card-header">
                 {{project.name}}
-            <hr>
+                <hr>
             </div>
 
             <div class="card-body mg-t-10">
@@ -49,9 +48,9 @@
                 {{project.language}}
                 <a href="{{project.url}}" class="mdi mdi-github-circle float-right"></a>
             </div>
-           
+
         </a>
-    
+
     </div>
 
 </div>

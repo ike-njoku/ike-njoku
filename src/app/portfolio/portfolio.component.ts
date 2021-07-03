@@ -9,7 +9,7 @@ import { PortfolioService } from '../services/portfolio.service';
 })
 export class PortfolioComponent implements OnInit {
 
-  //  element(s) to animate 
+  //  element(s) to animate
   @ViewChild('animatable')animatable;
 
   // projects
@@ -37,7 +37,7 @@ export class PortfolioComponent implements OnInit {
       // increment the running value
       item.runningValue++;
     })
-        
+
   }
 
   getGitHubRepos(){
@@ -73,6 +73,6 @@ export class PortfolioComponent implements OnInit {
     })
   }
 
-  
+
 }
 
