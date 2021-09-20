@@ -20,7 +20,7 @@ export class EmailService {
   ) { }
 
   sendEmail(email: EmailFormat): Observable<any> {
-    return this.http.post<any>('http://localhost:2002/send-mail', email)
+    return this.http.post<any>('https://ike-njoku-dc-mail-server.herokuapp.com/send-mail', email)
       .pipe(
         (retry(1)),
         (catchError(this.onError))
