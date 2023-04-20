@@ -1,2 +1,1 @@
-Hello, You have reached My Profile.
-Let me know How I can make Improvements in writing Software. 
+Human | Software Engineer | Writer | Visual Artist • Random acts of Kindness • نعود جميعا إلى الغبار 
